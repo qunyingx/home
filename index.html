@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--link rel="icon" href="../../favicon.ico">
+
+    <title>JzxxOJ</title>
+      <link rel="stylesheet" href="http://oj.jzxx.net/template/sweet/css/style.css">
+
+<!--      --><!--      <link rel="stylesheet" href="./css/style.css">-->
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<!--<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>-->
+<!--<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>-->
+<!--<![endif]-->
+</head>
+
+<body>
+
+<div class=wrap id=wrap>
+    <div class=wrapper>
+        <div class=header>
+            <div class="head clearfix">
+                <div class=logo_box>
+                    <h1>JzxxOJ</h1>
+                    <a href='javascript:;' class=logo_link></a>
+                </div>
+                <div class=nav_box id=nav_box>
+                    <ul>
+                        <li>
+<!--                            <a href="">-->
+                            <a href='#' clickid=guanwang_navigation_homepage>主页</a>
+                        </li>
+                        <li>
+                            <a href='problemset.php' clickid=guanwang_navigation_productcenter>练习</a>
+                        </li>
+                        <li>
+                            <a href='contest.php' clickid=guanwang_navigation_customer>竞赛</a>
+                        </li>
+			<li>
+                            <a href='learn-guide.php' clickid=guanwang_navigation_customer>导图</a>
+                        </li>
+                        <li>
+                            <a href='category.php' clickid=guanwang_navigation_customer>分类</a>
+                        </li>
+                        <li>
+                            <a href='status.php' clickid=guanwang_navigation_yangtai>状态</a>
+                        </li>
+                        <li>
+                            <a href='ranklist.php' clickid=guanwang_navigation_yangtai>排名</a>
+                        </li>
+                    </ul>
+                    <span class=ic_line></span></div>
+            </div>
+        </div>
+        <div class=page_wp id=page_wp>
+            <div class="page page_1"><span class="page_bg scale_box"></span>
+                <div class=img_box><img src="" alt=""></div>
+                <div class="txt_box scale_box">
+                    <h2>JzxxOJ OnlineJudge</h2>
+                    <p class=txt_brief>从现在开始，你的学生生活将是如此的不同。巨大的脑洞，丰富的题库，全面的测试用例，全新的视野，这一切，都让你的 Coder 生活更加精彩。</div>
+            </div>
+            <div class="page page_2"><span class="page_bg scale_box"></span>
+                <div class=img_box><img src="" alt=""></div>
+                <div class="txt_box scale_box">
+                    <h2>WJOJ OnlineJudge</h2>
+                    <p class=txt_brief><div class='panel panel-default' style='width:80%;margin:0 auto;'><div class='panel-heading'><h3>新闻<h3></div><div class='panel-body'><div class='panel panel-default'><div class='panel-heading'><big>2320-数的分解 解题报告</big>-<small>Shortway</small></div><div class='panel-body'><p>最优化问题，尽量都分成3，不足部分就分成2。<br />
+<br />
+对于 n &lt; 4，可以验证其分解成几个正整数的和的乘积是小于 n 的。<br />
+对于 n &gt;= 4, 能证明其能分解成几个数的和使得乘积不小于 n。<br />
+如果分解成 1 和 n - 1，那么对乘积是没有帮助的，因此，假设 n分解成 a 和 n - a，2 &lt;= a &lt;= n - 2，那么<br />
+a * (n - a) - n<br />
+= (a - 1) * n - a * a + a - a<br />
+= (a - 1) * (n - a) - a<br />
+&gt;= (a - 1) * 2 - a<br />
+= a - 2<br />
+&gt;= 0<br />
+如果 a, n - a 仍然 &gt;= 4，那么继续分解，直至 a, n - a &lt; 4。因为每次分解都能使乘积增加，所以最优解必是最终分解结果，也即分解出的数全是 2 或 3 。<br />
+（1）<br />
+假设 n 是偶数，且分解成 a 个 2 和 b 个 3，即 n = 2 * a + 3 * b，则乘积为 2<sup>a</sup> * 3<sup>b</sup>。<br />
+注意到 2<sup>3</sup> &lt; 3<sup>2</sup> 且 2 * 3 = 3 * 2 = 6，所以每 3 个 2 换成 2 个 3 会使乘积更大，因此，<br />
+最优方案是分解成 n/6*2 个 3 和 n%6/2 个 2，乘积为 3<sup>n/6*2</sup> * 2<sup>n%6/2</sup>。<br />
+（2）<br />
+假设 n 是奇数，则一定需要分出一个 3，然后 n - 3 就是偶数。因此最优方案是分解出 <br />
+(n-3)/6*2+1 个 3 和 (n-3)%6/2 个 2，乘积为 3<sup>(n - 3)/6*2+1</sup> * 2<sup>(n-3)%6/2</sup>。</p>
+<hr />
+<p></p></div></div></div><div class='panel-footer'>This <a href=http://cm.baylor.edu/welcome.icpc>ACM/ICPC</a> OnlineJudge is a GPL product from <a href=https://github.com/zhblue/hustoj>hustoj</a></div></div></div>
+            </div>
+            <div class="page page_3"><span class="page_bg scale_box"></span>
+                <div class=img_box><img src="" alt=""></div>
+                <div class="txt_box scale_box">
+                    <h2>与你一起发现更多精彩资源</h2>
+                     <p class=txt_brief>coding 的世界等你来探索</div>
+                </div>
+                <div class="page page_4"><span class="page_bg scale_box"></span>
+                    <div class=img_box><img src="" alt=""></div>
+                    <div class="light_wp scale_box"><span class=light_box><i class=light_1></i> <i class=light_2></i> <i class=light_3></i> <i class=light_4></i> <i class=light_5></i></span></div><span class="meteor_box scale_box"></span>
+                    <div class="txt_box scale_box">
+                        <h2>还有另一个自己在这里等你</h2>
+                        <p class=txt_brief>也许另一个人也和你一样，发现着自己的创新和诚心。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="star_wp scale_box" id=star_wp><span class=star_bg></span> <span class=star_box></span></div><canvas id=canvas></canvas>
+            <div class="btns_wp scale_box">
+
+                
+                    <a class="btn_download JS-btn-download" href='loginpage.php'>登录</a>
+
+                
+                <!--                <a class="btn_download JS-btn-download" href='--><!--loginpage.php'>登录</a>-->
+            </div>
+
+
+            <div class=btn_control id=btn_control>
+                <a href=javascript:; class=cur></a>
+                <a href=javascript:;></a>
+                <a href=javascript:;></a>
+                <a href=javascript:;></a>
+            </div>
+            <!-- 			<div class=footer>
+                            <div class=foot>
+                                <p>© XXXX-2016 XXXX 版权所有</div>
+                        </div> -->
+        </div>
+    </div>
+
+<!--<div class="container">-->
+<!--    --><!--    <!-- Main component for a primary marketing message or call to action -->-->
+<!--    <div class="jumbotron">-->
+<!--        <p>-->
+<!--        <center> 最近提交记录 : --><!-- .-->
+<!--            <div id=submission style="width:80%;height:300px" ></div>-->
+<!--        </center>-->
+<!--        </p>-->
+<!--        --><!--    </div>-->
+<!---->
+<!--</div> <!-- /container -->-->
+
+<!--<script src="./js/vendors.js"></script>-->
+<!--<script src="./js/index.js"></script>-->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--<script language="javascript" type="text/javascript" src="--><!--include/jquery.flot.js"></script>-->
+<!--<script type="text/javascript">-->
+<!--    $(function () {-->
+<!--        var d1 = -->//;
+<!--//        var d2 = --><!--//;-->
+<!--//        $.plot($("#submission"), [-->
+<!--//            {label:"--><!--//",data:d1,lines: { show: true }},-->
+<!--//            {label:"--><!--//",data:d2,bars:{show:true}} ],{-->
+<!--//            grid: {-->
+<!--//                backgroundColor: { colors: ["#fff", "#eee"] }-->
+<!--//            },-->
+<!--//            xaxis: {-->
+<!--//                mode: "time"//,-->
+<!--////max:(new Date()).getTime(),-->
+<!--////min:(new Date()).getTime()-100*24*3600*1000-->
+<!--//            }-->
+<!--//        });-->
+<!--//    });-->
+<!--//    //alert((new Date()).getTime());-->
+<!--//</script>-->
+</body>
+</html>
+<script src="template/sweet/js/vendors.js"></script>
+
+<script src="template/sweet/js/index.js"></script>
+
+<!--not cached-->
